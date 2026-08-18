@@ -9,7 +9,7 @@ pandas>=2.0.0
 
 # NLP / Embeddings / Generation
 sentence-transformers>=2.5.0
-transformers>=4.38.0
+transformers<5
 torch>=2.1.0
 accelerate>=0.27.0
 
