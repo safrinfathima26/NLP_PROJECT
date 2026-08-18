@@ -1,0 +1,35 @@
+##############################################
+# Intelligent Document Question Answering
+# using NLP and RAG — Dependencies
+##############################################
+
+# Core
+numpy>=1.24.0
+pandas>=2.0.0
+
+# NLP / Embeddings / Generation
+sentence-transformers>=2.5.0
+transformers>=4.38.0
+torch>=2.1.0
+accelerate>=0.27.0
+
+# Vector store
+faiss-cpu>=1.7.4
+
+# Document loading
+pypdf>=4.0.0
+python-docx>=1.1.0
+
+# Text processing
+nltk>=3.8.1
+tiktoken>=0.6.0
+
+# UI
+streamlit>=1.32.0
+
+# Optional: cloud LLM providers (only needed if you switch generator backend)
+openai>=1.12.0
+python-dotenv>=1.0.0
+
+# Utilities
+tqdm>=4.66.0

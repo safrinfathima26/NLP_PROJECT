@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Environment secrets
+.env
+
+# Vector index artifacts (regenerate rather than commit)
+vector_index/
+*.faiss
+*.pkl
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Model caches
+.cache/

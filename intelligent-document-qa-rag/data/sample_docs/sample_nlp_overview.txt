@@ -1,0 +1,59 @@
+Natural Language Processing: An Overview
+
+Natural Language Processing (NLP) is a subfield of artificial intelligence
+concerned with enabling computers to understand, interpret, and generate
+human language. It combines computational linguistics with statistical,
+machine learning, and deep learning models.
+
+Core NLP Tasks
+--------------
+Common NLP tasks include tokenization, part-of-speech tagging, named entity
+recognition, sentiment analysis, machine translation, text summarization,
+and question answering. Modern NLP systems are largely built on top of
+transformer architectures, introduced in the 2017 paper "Attention Is All
+You Need."
+
+What is Retrieval-Augmented Generation (RAG)?
+----------------------------------------------
+Retrieval-Augmented Generation, or RAG, is a technique that combines
+information retrieval with text generation. Instead of relying purely on
+the knowledge encoded in a language model's parameters, a RAG system
+first retrieves relevant passages from an external knowledge source (such
+as a document collection or database) and then uses those passages as
+context for generating an answer. This approach has two major advantages:
+it reduces hallucination, since answers are grounded in retrieved
+evidence, and it allows the system to answer questions about information
+that was never part of the model's original training data, such as
+private company documents or recently published material.
+
+How a RAG Pipeline Works
+-------------------------
+A typical RAG pipeline consists of four stages. First, documents are
+loaded and split into smaller chunks of text, since embedding models and
+language models both have limited context windows. Second, each chunk is
+converted into a dense vector embedding using an embedding model such as
+Sentence-BERT. Third, these embeddings are stored in a vector database
+(such as FAISS, Pinecone, or Chroma) that supports fast similarity
+search. When a user asks a question, the question itself is embedded and
+compared against the stored chunk embeddings to retrieve the most
+semantically similar passages. Fourth, the retrieved passages are
+combined with the original question into a prompt, which is passed to a
+large language model to generate a final, grounded answer.
+
+Applications of Document Question Answering
+---------------------------------------------
+Intelligent document question answering systems built on RAG are widely
+used in customer support, legal document review, academic research
+assistance, enterprise knowledge management, and technical documentation
+search. By allowing users to ask natural-language questions instead of
+manually searching through long documents, these systems significantly
+reduce the time needed to find relevant information.
+
+Evaluation of RAG Systems
+---------------------------
+RAG systems are typically evaluated along two dimensions: retrieval
+quality (whether the correct passages were retrieved) and generation
+quality (whether the final answer is accurate, relevant, and grounded in
+the retrieved context). Common metrics include precision and recall at k
+for retrieval, and metrics such as faithfulness, answer relevancy, and
+BLEU or ROUGE scores for generation.
